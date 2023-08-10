@@ -1,5 +1,7 @@
 "# REST-API_CRUD" 
 
+**Quick preview images:-** http://u.pc.cd/kU6ctalK
+
 
 **Responsive:** Simple and Clean UI, Compatable view for Desktops/Laptops only.
 
