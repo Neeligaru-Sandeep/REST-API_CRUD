@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="css/my_college_data.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>My College Students Info</h2>
+            <button><a href="/">+ Add Student Info</a></button>    
+        </div>
+    
+        <table>
+            <thead>
+                <th>S.No</th>
+                <th>FullName</th>
+                <th>Course</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th colspan="2">Actions</th>
+            </thead>
+                
+            <% for(let item of items){ %>
+                <tr>
+                <td>1.</td>
+                <td><%= item.fullName%></td>
+                <td><%= item.course%></td>
+                <td><%= item.age%></td>
+                <td><%= item.email%></td>
+                <td><%= item.phone%></td>     
+                <td>
+                    <button class="action-button edit">
+                        <a href="/my_college_data/<%= item._id%>/add_student_info_edit">Edit</a>
+                    </button>
+                </td>
+                <td>
+                    <form method="post" action="/my_college_data/<%= item._id%>?_method=DELETE">
+                        <button class="action-button delete">Delete</button>
+                    </form>                
+                </td>   
+            </tr>
+            <%}%>         
+        </table>
+    </div>
+</body>
+</html>
